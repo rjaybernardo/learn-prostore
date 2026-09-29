@@ -1,9 +1,18 @@
-export default function Home() {
+import ProductList from "@/components/shared/product/product-list";
+import sampleData from "@/db/sample-data";
+
+const HomePage = () => {
   return (
-    <div>
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        Latest Products
-      </main>
+    <div className="space-y-8">
+      <h1 className="h2-bold">Latest Products</h1>
+
+      <ProductList
+        title="Newest Arrivals"
+        data={sampleData.products}
+        limit={4}
+      />
     </div>
   );
-}
+};
+
+export default HomePage;

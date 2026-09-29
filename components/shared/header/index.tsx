@@ -1,9 +1,10 @@
-import { APP_NAME } from "@/lib/contants";
-import { ShoppingCart, UserIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { ShoppingCart, UserIcon } from "lucide-react";
 
 import { buttonVariants } from "@/components/ui/button";
+import ModeToggle from "@/components/shared/header/mode-toggle";
+import { APP_NAME } from "@/lib/constants";
 
 const Header = () => {
   return (
@@ -18,18 +19,29 @@ const Header = () => {
               height={48}
               priority
             />
+
             <span className="ml-3 hidden text-2xl font-bold lg:block">
               {APP_NAME}
             </span>
           </Link>
         </div>
+
         <div className="flex items-center gap-2">
-          <Link href="/cart" className={buttonVariants({ variant: `ghost` })}>
+          <ModeToggle />
+
+          <Link
+            href="/cart"
+            className={buttonVariants({
+              variant: "ghost",
+            })}
+          >
             <ShoppingCart />
             <span>Cart</span>
           </Link>
+
           <Link href="/sign-in" className={buttonVariants()}>
             <UserIcon />
+            <span>Sign In</span>
           </Link>
         </div>
       </div>

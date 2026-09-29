@@ -40,11 +40,11 @@ Prisma 7
 
 PostgreSQL / Neon
 
-@prisma/adapter-neon
+`@prisma/adapter-neon`
 
 Auth.js / NextAuth 5.0.0-beta.32
 
-@auth/prisma-adapter
+`@auth/prisma-adapter`
 
 bcrypt-ts-edge
 

@@ -11,7 +11,7 @@
 !.yarn/versions
 
 # testing
-/coverage
+/coverage 
 
 # next.js
 /.next/
@@ -40,5 +40,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-/.vectorcode
+/.vectorcode/
 /~
+
+/lib/generated/prisma
+prisma7.config.ts
+/.agents
+/.claude/
+/.windsurf/

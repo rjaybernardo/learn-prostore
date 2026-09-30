@@ -1,6 +1,9 @@
-import type { Product } from "@/types";
+import type { z } from "zod";
+import { insertProductSchema } from "@/lib/validator";
 
-const products: Product[] = [
+type ProductCreate = z.infer<typeof insertProductSchema>;
+
+const products: ProductCreate[] = [
   {
     name: "Polo Sporting Stretch Shirt",
     slug: "polo-sporting-stretch-shirt",

@@ -19,6 +19,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             alt={product.name}
             width={300}
             height={300}
+            loading="eager"
             className="aspect-square w-full object-cover"
           />
         </Link>

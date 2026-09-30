@@ -1,5 +1,4 @@
 import ProductCard from "./product-card";
-
 import type { Product } from "@/types";
 
 type ProductListProps = {

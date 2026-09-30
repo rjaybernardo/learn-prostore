@@ -1,9 +1,11 @@
-import { neonConfig } from "@neondatabase/serverless";
+import "server-only";
+
+import dns from "node:dns";
+
 import { PrismaNeon } from "@prisma/adapter-neon";
 import { PrismaClient } from "@/lib/generated/prisma/client";
-import ws from "ws";
 
-neonConfig.webSocketConstructor = ws;
+dns.setDefaultResultOrder("ipv4first");
 
 const connectionString = process.env.DATABASE_URL;
 
